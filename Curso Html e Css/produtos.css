@@ -1,0 +1,109 @@
+/* *{
+    padding: 0;
+    margin: 0;
+     Pré-definição do navegador sendo excluída
+} */
+
+header{
+    background-color: rgb(161, 156, 156);
+    padding: 20px 0;
+}
+/* inline -> tamanho do conteúdo, ex: uma imagem -> vai ter a altura e largura daquela imagem
+block -> tamanho é sempre 100% da pagina */
+
+.caixa{
+    position: relative;
+    /* fez com que a posição absoluta da tag nav entrasse na div */
+    width: 940px;
+    margin: 0 auto;
+    /* largura padrão da web */
+}
+
+nav{
+    position: absolute;
+    /* position absuloute -> Posição absoluta em relação a página inteira, ao cabeçalho, posição começa em outro lugar,
+    nesse exemplo ele sai do header. Posso posicionar meu elemento em qualquer lugar da página com ele. */
+    /* position relative -> posição relativa a posição inicial */
+    top: 110px;
+    right: 0;
+}
+nav ul li {
+    display: inline-flex;
+    margin: 0 0 0 10px;
+}
+
+nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a:hover{
+    /* quando mouse passar o cima */
+    text-decoration: underline;
+    color: rgb(172, 125, 40);
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    /* tamanho -> tipo -> cor */
+    /* tipos -> solid, dashed, dotted -> solido, tracejado, pontilhado */
+    border-radius: 10px;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    /* box-sizing delimita o tamanho dito anteriormente para que não seja incrementado o tamanho dos objtos com margem e
+    e padding (espaçamento interno), com isso box-sizing faz com que a largura seja sempre 30% delimitado no width
+    e o padding se encaixe nesses 30% */
+}
+
+.produtos li:hover{
+    border-color: rgb(172, 125, 40);
+}
+
+.produtos li:active{
+    /* quando estiver clicando */
+    border-color: rgb(31, 90, 31);
+}
+
+.produtos li:hover h2{
+    /* quando o mouse estiver por cima, alterar a tag que está sendo mencionada */
+    font-size: 34px;
+}
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+.produtos-preço{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url('assets/bg.jpg');
+    padding: 40px 0;
+    /*  */
+}
+
+.copyright{
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+}
