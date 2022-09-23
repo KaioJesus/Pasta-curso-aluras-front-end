@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
      Pré-definição do navegador sendo excluída
-} */
+}  */
 
 header{
     background-color: rgb(161, 156, 156);
@@ -106,3 +106,71 @@ footer{
     font-size: 12px;
     margin-top: 20px;
 }
+
+.main-contato{
+    width:940px ;
+    margin: 0 auto;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    /* possui display inline, ou seja, todos os label ficam um do lado do outro */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.input-padrao{
+    display: block;
+    /* input possui display inline-block */
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    /* espaçamento interno, dentro das caixinhas */
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background-color: rgb(255, 166, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s all;
+    /* transição fazendo com que as coisas não mudem automaticamente. Por exemplo, nesse caso eu pedi quando o mouse estiver em cima do botão, mudar a cor para laranja escuro, se não tivesse o "transition-delay", iria acontecer imediatamente, com essa ferramenta pedimos um pouco de atraso para que aconteça o que pedimos */
+    border: none;
+    border-radius:5px;
+}
+
+.enviar:hover{
+    background-color: darkorange;
+    transform: scale(1.1);
+    /* aumentar a escala do que foi pedido*/
+    cursor: pointer;
+}
+
+table{
+    margin: 20px 0 40px;
+}
+
+thead{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+/* tag -> 1
+Classe -> 10
+id -> 100
+Forças de cada elemento do css, é importante saber para que nada seja sobrescrito
+*/
