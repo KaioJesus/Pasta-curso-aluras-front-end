@@ -306,6 +306,9 @@ Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e 
 */
 
 @media screen and (max-width: 480px) {
+    main{
+        padding: 0 20px 0;
+    }
     .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
         width: auto;
     }
