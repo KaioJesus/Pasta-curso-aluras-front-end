@@ -187,6 +187,12 @@ td, th{
     margin: 1em 0;
     clear: left;
     /* limpar o float */
+
+    /* text-shadow: 2px 2px red;
+    sombra do texto, desenhada com o texto */
+
+    /*color: rgba(0,0,0,0.3);
+     rgba -> inclui a camada de opacidade (alpha) */
 }
 
 .principal{
@@ -231,10 +237,27 @@ td, th{
 
 .beneficios{
     padding: 3em 0;
+    /* box-shadow: inset 0 0 #FF0000;
+    inset -> fazendo com que a sombra seja interna
+    sombras internas não são deslocáveis x e y permanecem 0
+    */
 }
 
 .imagem-beneficio{
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px  10px 10px black ;
+    
+    /*sombra do objeto (na caixa) 
+    box-shawdow: X Y #XXXXXX; sendo x deslocamento no eixo x e y deslocamento no eixo y (plano cartesiano)
+    terceiro elemento -> blur -> grau de espalhamento da sombra, ela vai deixar de ser sólida e vai para do sólido até um grau de espalhamento
+    box-shadow: 10px  10px black ; -> nesse caso a sombra é um quadrado
+    Quarto elemento -> intensidade da borda 
+    eu posso pôr mais sombras, utilizando a virgula, por ex,  box-shadow: 10px  10px 30px black, -10px -10px 5px yrllow;*/
+}
+.imagem-beneficio:hover{
+    opacity: 0.3;
 }
 
 .conteudo-beneficios {
@@ -269,6 +292,57 @@ td, th{
     margin: 2em auto;
     /* automatico na esquerda e direita para centralizar o conteúdo */
 }
+
+/* media queries
+
+Perguntaremos ao navegador qual é o tamanho da tela em questão e, se for aquele que desejamos, entregaremos o estilo correto.
+
+Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e a pesquisa. Todas as telas que tenham até 450, terão esse estilo diferente, reescrito. Para exempliciar, colocaremos no background um estilo da cor vermelha. 
+@media screen and (max-width: 480px) {
+    body {
+        background: red;
+    }
+}
+*/
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+        /* menu que tá na posição absolute, volte a ser estático */
+    }
+
+    .lista-benefits, .imagem-beneficio{
+        width: 100%;
+    }
+
+    /* adaptação da visualização do pc para o celular -> responsividade */
+}
+
+/* main > p{
+    Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+}
+
+img + p{
+    Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+}
+
+img ~ p {
+    Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+} 
+
+.principal p:not(#missao) {
+    Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+}
+
+*/
 
 /* tag -> 1
 Classe -> 10
