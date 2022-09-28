@@ -110,10 +110,9 @@ footer{
     margin-top: 20px;
 }
 
-main{
-    background: linear-gradient(#eeedede3,#9e9e9e,#747070);
-    /* no primeiro valor, eu posso colocar o valor em graus para dizer se vem de baixo para cima ou de um lado para o outro */
-    /* radial-gratient -> em circulos */
+.espacamento{
+    width: 940px;
+    margin: 0 auto;
 }
 
 form{
@@ -173,6 +172,10 @@ td, th{
     padding: 8px 15px;
 }
 /* inicio pagina principal */
+.gradiente{
+    background: linear-gradient(#eeedede3,#c0b6b6,#b1aaaa);
+}
+
 .banner{
     width: 100%;
 }
@@ -223,6 +226,8 @@ td, th{
 
 .mapa{
     padding: 3em 0;
+    /* no primeiro valor, eu posso colocar o valor em graus para dizer se vem de baixo para cima ou de um lado para o outro */
+    /* radial-gratient -> em circulos */
 }
 
 .mapa p{
@@ -309,10 +314,10 @@ Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e 
     main{
         padding: 0 20px 0;
     }
-    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .espacamento{
         width: auto;
     }
-
+    
     h1{
         text-align: center;
     }
@@ -325,6 +330,17 @@ Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e 
     .lista-benefits, .imagem-beneficio{
         width: 100%;
     }
+
+    .produtos{
+        width: auto;
+    }
+
+    .produtos li{
+        width: auto;
+        display: block;
+        margin: 20px 0;
+    }
+
 
     /* adaptação da visualização do pc para o celular -> responsividade */
 }
