@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+/* importando ícones*/
+
+body {
+    background-color: #1D232A;
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: #FFFFFF;
+}
+
+
+.cabecalho{
+    display: flex;
+
+    /* display flex diz que elementos dentro de um espaço podem ser remanejados -> flex-container.*/
+    justify-content: space-between;
+
+    /* O justify-content pega todo o espaçamento que tem lateral e redistribui entre os elementos do flex container. */
+
+    /* flex-start;, que está dizendo que todos os elementos devem ficar no início do flex container. 
+
+    flex-end; é no final do flex container. 
+    O space-around; que vai deixar um espaçamento igual em cada um dos elementos. 
+
+    space-evenly ele pega e redistribui igualmente o espaçamento entre os elementos, então o espaçamento vai ser sempre igual entre eles.
+
+    space-between;, que vai pegar todo aquele espaço vazio na direita e colocar os elementos centrais do flex container, deixando as pontas coladas no flex container.
+    */
+    align-items: center;
+    /* O align-items mexe com o espaçamento vertical. mesmas propriedades do justify-content */
+    /* stretch faz todos os elementos ocuparem a mesma altura do flex container, a altura máxima do flex container. */
+    background-color: #15191C;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.cabecalho__menu i::before{
+    content: "\e904";
+    font-size: 24px;
+}
+.cabecalho__notificacao i::before{
+    content: "\e906";
+    font-size: 24px;
+}
+
+.cabecalho__logo{
+    width: 40px;
+}
+
+.menu-lateral{
+    display: flex;
+
+    flex-wrap: wrap;
+    /* flwx-wrap há dois valores, nowrap e wrap: nowrap não quebra linha no final da tela, ele continua mesmo que não contenha espaço, já o nowrap quebra a linha no final da tela, fazendo com que o conteúdo fique embaixo */
+
+    flex-direction: column;
+    /* quando usado o flex-direction, o justify-content e align-items invertem seus valores, justify para vertical, align para horizontal */
+
+    /* Notice that when you set the direction to a reversed row or column, start and end are also reversed. */
+
+    background-color: #15191C;
+    width: 75vw; 
+    /* largura do viewport */
+    height: 100vh;
+    /* altura do viewport */
+
+}
+
+.menu-lateral__logo{
+    width: 110px;
+    align-self: center;
+    padding: 16px;
+}
+
+.menu-lateral__link{
+    height: 64px;
+    color: #95999C;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral__link--ativo{
+    color: white;
+    padding-left: 56px;
+    border: 8px solid white;
+}
+
+.menu-lateral__link::before{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--inicio::before{
+    content: "\e902";
+}
+.menu-lateral__link--videos::before{
+    content: "\e90e";
+}
+.menu-lateral__link--picos::before{
+    content: "\e909";
+}
+.menu-lateral__link--integrantes::before{
+    content: "\e903";
+}
+.menu-lateral__link--camisas::before{
+    content: "\e900";
+}
+.menu-lateral__link--pinturas::before{
+    content: "\e90a";
+}
+
