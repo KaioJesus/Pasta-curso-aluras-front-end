@@ -1,8 +1,9 @@
 @font-face {
     font-family: 'icones';
-    src: url(../font/icones.ttf);
+    src: url(assets/font/icones.ttf);
 }
-/* importando ícones*/
+
+/* importanto ícones */
 
 body {
     background-color: #1D232A;
@@ -66,7 +67,18 @@ body {
     height: 100vh;
     /* altura do viewport */
 
+    position: absolute;
+    left: -100vw;
+    /* posicionando o menu para fora da tela */
+    transition: .5s;
 }
+
+.menu-lateral--ativo{
+    left: 0;
+    /* quando o botão ativo, trás o menu */
+    transition: .5s;
+}
+
 
 .menu-lateral__logo{
     width: 110px;
@@ -85,7 +97,11 @@ body {
 .menu-lateral__link--ativo{
     color: white;
     padding-left: 56px;
-    border: 8px solid white;
+    border: 4px solid white;
+}
+
+.menu-lateral__link--ativo:hover{
+    opacity: 0.1;
 }
 
 .menu-lateral__link::before{
@@ -115,3 +131,18 @@ body {
     content: "\e90a";
 }
 
+.principal{
+    padding: 24px 16px;
+}
+
+.titulo-pagina{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    /* o que passar do cartão ficará escondido */
+}
