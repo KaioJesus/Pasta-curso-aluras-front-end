@@ -31,7 +31,7 @@ fonte alternativa: ``
 
 links: `#0480DC`
 
-botão: `#0480DC`
+botão: ``
 
 sombras: `0px 4px 4px rgba(0, 0, 0, 0.16)`
 
