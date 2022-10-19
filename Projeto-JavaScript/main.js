@@ -1,9 +1,14 @@
-function tocaSom (idElementoAudio){
-    // recebendo parâmento, ou seja clicar
-    document.querySelector(idElementoAudio).play();
+function tocaSom (seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento && elemento.localName === 'audio') {
+        elemento.play();
+    }
+    else {
+        //alert('Elemento não encontrado');
+        console.log('Elemento não encontrado ou seletor inválido');
+    }
 }
-
-
 /*function tocaSomPom() {
         document.querySelector('#som_tecla_pom').play();
     
@@ -23,12 +28,26 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 
 for(let contador = 0; contador < listaDeTeclas.length; contador++){
 
-    listaDeTeclas[contador].onclick = function (){
-        // função anonima para chamar a função principal, já que se eu chamar a função principal direto, faria o que a função faz
-        tocaSom(idElementoAudio).onclick;
+    const tecla = listaDeTeclas[contador];
+    const instrumento =  tecla.classList[1];
+    const idAudio = `#som_${instrumento}` // template string
+    
+    // console.log(idAudio);
+
+    tecla.onclick = function (){ // função anonima para chamar a função principal, já que se eu chamar a função principal direto, faria o que a função faz
+        tocaSom(idAudio);
     };
 
-    console.log(contador);
+    tecla.onkeydown =  function (evento){ // evento de apertar tecla
+        if(evento.code === 'Space' || evento.code === 'Enter'){
+            tecla.classList.add('ativa');
+        }
+    }
+    tecla.onkeyup = function (){
+        tecla.classList.remove('ativa');
+    } // quando solta a tecla
+
+    // console.log(contador);
 }
 
 // referencias são criadas com base no valor que vão receber e guardar, elas podem ser constantes ou variáveis, no nosso caso é constante e podemos criar com qualquer nome, mas um nome que faça sentido.
