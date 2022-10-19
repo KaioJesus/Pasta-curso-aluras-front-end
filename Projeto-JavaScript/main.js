@@ -1,8 +1,15 @@
-function tocaSomPom() {
-    /* 
+function tocaSom (idElementoAudio){
+    // recebendo parâmento, ou seja clicar
+    document.querySelector(idElementoAudio).play();
+}
+
+
+/*function tocaSomPom() {
+        document.querySelector('#som_tecla_pom').play();
+    
         querySelector('') -> função que é capaz de buscar e trazer a referencia do elemento -> busca o primeiro elemento
         querySelectorAll -> Função que seleciona todos os elementos com aquele seletor passado, ou seja, os 9 botoes devem ter uma classe em comum 
-    */
+    
 
     // document representa todo o html dentro do js
 
@@ -10,11 +17,20 @@ function tocaSomPom() {
     
     // . (ponto) após a primeira função quer dizer que está entrando na função
     
-} 
+} */
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
-listaDeTeclas[0].onclick = tocaSomPom;
+for(let contador = 0; contador < listaDeTeclas.length; contador++){
+
+    listaDeTeclas[contador].onclick = function (){
+        // função anonima para chamar a função principal, já que se eu chamar a função principal direto, faria o que a função faz
+        tocaSom(idElementoAudio).onclick;
+    };
+
+    console.log(contador);
+}
+
 // referencias são criadas com base no valor que vão receber e guardar, elas podem ser constantes ou variáveis, no nosso caso é constante e podemos criar com qualquer nome, mas um nome que faça sentido.
 
 /*
