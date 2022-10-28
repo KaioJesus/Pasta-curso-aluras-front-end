@@ -1,0 +1,54 @@
+/* Cabeçalho */
+
+.cabecalho__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0; 
+    /* fixando o cabeçalho na posição 0 */
+}
+
+.cabecalho__pesquisar__item {
+    display: none;    
+}
+
+/* seção superior */
+
+.superior__secao__container{
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+    /* Fazendo não pular linha */
+
+    overflow: scroll;
+    /* barra de rolagem */
+
+    gap: 16px;
+    /* aplica espaçamento entre os elementos */
+}
+
+
+/* rodapé */
+
+.rodape__container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* responsividade */
+@media (min-width: 834px) {
+    /* cabeçalho */
+
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    /* rodapé */
+    
+    .rodape__container{
+        justify-content: space-between;
+    }
+}
