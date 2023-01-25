@@ -20,4 +20,21 @@ body{
 .container{
     height: 100vh;
     /* uma tela inteira -> viewport height*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    /* 1 em -> tamanho da fonte */
+    color: var(--branco-principal);
+    display: block;
+    /* display block -> ocupa o espaço inteiro, não deixando nada no lado */
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2xp solid var(--branco-principal);
 }
