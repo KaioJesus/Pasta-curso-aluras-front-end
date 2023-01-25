@@ -1,0 +1,23 @@
+:root{
+    /* variáveis -> Para criá-las, basta iniciais com 2 hifens e o nome que você deseja.*/
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030c;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+}
+
+.principal{
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container{
+    height: 100vh;
+    /* uma tela inteira -> viewport height*/
+}
