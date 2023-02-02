@@ -74,8 +74,10 @@
 
     .container__titulo{
         font-weight: 400;
+        display: inline;
+        margin-left: 0.5em;
     }
-    .container__titulo-negrito{
+    .container__titulo--negrito{
         font-weight: 700;
     }
 
